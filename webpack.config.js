@@ -9,5 +9,15 @@ module.exports = {
   devServer: {
     contentBase: path.resolve(__dirname, "./dist"),
     watchContentBase: true
+  },
+  module: {
+    rules: [{
+      test: /\.(png|jpg|gif)$/,
+      use: [{
+        loader: 'file-loader',
+        options: {}
+      }]
+    }]
   }
+
 };
